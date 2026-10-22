@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#101024">
+  <title>Snake Retro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-container">
+    <header class="header">
+      <div class="brand">
+        <span class="brand-icon">🐍</span>
+        <div>
+          <h1>SNAKE<span>RETRO</span></h1>
+          <p>EL CLÁSICO, CON OTRA ENERGÍA</p>
+        </div>
+      </div>
+      <div class="best-box">
+        <span>RÉCORD</span>
+        <strong id="bestScore">0</strong>
+      </div>
+    </header>
+
+    <section class="scoreboard">
+      <div class="score-card">
+        <span>PUNTOS</span>
+        <strong id="score">000</strong>
+      </div>
+      <div class="score-card level-card">
+        <span>NIVEL</span>
+        <strong id="level">01</strong>
+      </div>
+    </section>
+
+    <section class="board-wrap">
+      <canvas id="gameCanvas" width="600" height="600"
+        aria-label="Tablero del juego Snake"></canvas>
+
+      <div class="overlay" id="overlay">
+        <div class="overlay-card">
+          <div class="overlay-emoji" id="overlayEmoji">🍒</div>
+          <h2 id="overlayTitle">¡A JUGAR!</h2>
+          <p id="overlayText">Come frutas, crece y consigue el récord.</p>
+          <button id="startButton" class="primary-button">INICIAR PARTIDA</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="game-actions">
+      <button id="pauseButton" class="secondary-button" disabled>Ⅱ PAUSAR</button>
+      <button id="restartButton" class="secondary-button">↻ REINICIAR</button>
+    </div>
+
+    <section class="mobile-controls" aria-label="Controles táctiles">
+      <button class="direction up" data-dir="up" aria-label="Arriba">▲</button>
+      <div class="horizontal-controls">
+        <button class="direction" data-dir="left" aria-label="Izquierda">◀</button>
+        <button class="direction" data-dir="down" aria-label="Abajo">▼</button>
+        <button class="direction" data-dir="right" aria-label="Derecha">▶</button>
+      </div>
+      <p>Toca las flechas para mover la víbora</p>
+    </section>
+
+    <footer>
+      <span class="status-dot"></span>
+      <span>FLECHAS / WASD PARA MOVER</span>
+      <span class="footer-separator">•</span>
+      <span>ESPACIO PARA PAUSAR</span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
